@@ -35,7 +35,28 @@ class Application < Sinatra::Base
     exec('python esp_command.py Forward')
   end
 
-  get "/reverse" do
-    "it's reverse"
+  get "/left " do
+    exec('python esp_command.py Left')
   end
+
+  get "/right" do
+    exec('python esp_command.py Right')
+  end
+
+  get "/on" do
+    exec('python esp_command.py On')
+  end
+
+  get "/soundOff" do
+    exec('python esp_command.py SoundOff')
+  end
+
+  get "/reverse" do
+    exec('python esp_command.py Reverse')
+  end
+
+  get "/stop" do
+    exec('python esp_command.py Stop')
+  end
+
 end
